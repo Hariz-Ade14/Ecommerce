@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+         img{
+            width: 300px;
+            height: 300px;
+         }
+    </style>
+</head>
+<body>
+        <button class="btn">Name</button>
+        <button class="btn">Sex</button>
+        <button class="btn">Age</button>
+
+        <br>
+
+
+        <!-- <button class="bward">m</button> -->
+
+        <img src="Images/alison-wang-mou0S7ViElQ-unsplash.jpg" alt="" class="imgs">
+
+
+        <button class="fward">>></button>
+        <button class="bward">--</button>
+
+   <script>
+           let BTNs = document.querySelectorAll(".btn");
+           console.log(BTNs);
+
+           let convertBTNs = Object.values(BTNs);
+           console.log(convertBTNs);
+
+           let Obj = {
+               Name: "hariz",
+               Age: 19,
+               Sex: "male"
+           };
+
+           convertBTNs.map(item => {
+                // convertBTNs[0].addEventListener("click" , () => {
+                     
+                // })
+                item.addEventListener("click" , () => {
+                    //   alert(item.innerHTML);
+                    if(item.onclick = convertBTNs[0]){
+                        // alert(Obj.Name);
+                        console.log(Obj.Name)
+                    }else if(item.onclick = convertBTNs[1]){
+                        console.log(Obj.Age);
+                    }else if(item.onclick = convertBTNs[2]){
+                        console.log(Obj.Sex);
+                    }
+                })
+           })
+
+           console.log(convertBTNs[0],convertBTNs[1],convertBTNs[2]);
+
+           let Images = document.querySelector(".imgs");
+           let imagesArr = ["Images/alison-wang-mou0S7ViElQ-unsplash.jpg",
+                            "Images/andres-jasso-PqbL_mxmaUE-unsplash.jpg",
+                            "Images/djurdjica-boskovic-3QEb9uH4gqA-unsplash.jpg",
+                            "Images/dollar-gill-TZBroJMzSrk-unsplash.jpg",
+                            "Images/faith-yarn-Wr0TpKqf26s-unsplash.jpg"
+                           ];
+          
+           let fward = document.querySelector(".fward");
+           let bward = document.querySelector(".bward");
+            
+           let i = 0;
+           for(; i < imagesArr.length; i++){
+               console.log(imagesArr[i]);
+           }
+                 
+           fward.addEventListener("click" , () => {
+                //  Images.src += Math.random(imagesArr[i]);
+                //  Images.src = imagesArr[i];
+                
+           });
+        //    fward.addEventListener("click" , () => {
+        //         //  Images.src = imagesArr[2];
+        //          Images.src = imagesArr[3];
+                
+        //    });
+        // console.log(Math.random(100));
+
+        try {
+             for(let i = 0; i < 20; i+=2){
+                  console.log(x);
+             }
+        } catch (error) {
+                console.log("error is" + error);
+        }
+
+        (function about() {
+             console.log("Sanni Hariz");
+        }());
+
+        (function person() {
+                function name(){
+                   let isName = "sam harris";
+                };
+
+                // console.log(isName); 
+        }());
+
+        // let arr = [2,4,6,8,10];
+        // let [T,F,S,E,TE] = arr;
+        // console.log(T,F,S,E,TE);
+
+        // asyn function me(){
+        //     let x = await
+        // }
+
+        let request = fetch("https://www.google.com")
+        .then(response => response.json)
+        .then(data => data);
+   </script>
+</body>
+</html>
